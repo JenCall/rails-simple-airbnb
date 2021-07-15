@@ -1,0 +1,22 @@
+<h3>This is the flat: <strong><%= @flat.name %></strong></h3>
+
+<p><%= @flat.description %></p>
+<p><%= @flat.address %></p>
+<p>----> <%= @flat.price_per_night %> Eur</p>
+<p>-----> <%= @flat.number_of_guests %> Eur</p>
+
+<hr>
+
+<%= link_to flats_path do %>
+  <i class="fa fa-history"></i> Flats
+<% end %>
+
+<%= link_to edit_flat_path(@flat) do %>
+  <i class="fa fa-history"></i> Edit
+<% end %>
+
+<%= link_to delete_path(@flat), method: :delete do %>
+  <i class="fa fa-history"></i> Delete
+<% end %>
+
+

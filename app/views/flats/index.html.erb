@@ -1,0 +1,21 @@
+<h1>Here are the flats</h1>
+
+<%= link_to new_flat_path do %>
+  <i class="fa fa-history"></i> Add a new Flat
+<% end %>
+
+<hr>
+
+<% @flats.each do |f|%>
+  <h3><%= f.name %></h3>
+  <h4><%= f.address %></h4>
+  <p><%= f.description %></p>
+  <p>----> <%= f.price_per_night %> Eur</p>
+  <p>-----> <%= f.number_of_guests %> Eur</p>
+  <hr>
+  <%= link_to @flat do %>
+    <i class="fa fa-history"></i> See the Flat
+  <% end %>
+  <hr>
+<% end %>
+
